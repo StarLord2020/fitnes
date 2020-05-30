@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return ;
+})->middleware('auth');
+
+Route::get('/client','ClientController@main');
 
 Auth::routes();
 
