@@ -53,14 +53,14 @@ class RegisterController extends Controller
             return preg_match('%^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$%i', $value) && strlen($value) >= 10;
         });
 
-        Validator::replacer('phone', function($message, $attribute, $rule, $parameters) {
+        Validator::replacer('number', function($message, $attribute, $rule, $parameters) {
             return str_replace(':attribute',$attribute, ':attribute is invalid phone number');
         });
         return Validator::make($data, [
             'surname' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
             'patronymic' => ['required', 'string', 'max:255'],
-            'number' => ['required','regex:/(01)[0-9]{9}/','max:255'],
+            'number' => ['required','max:255','number'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
