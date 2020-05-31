@@ -11,21 +11,24 @@ const mix = require('laravel-mix');
  |
  */
 
+var $ = require( "jquery" );
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/jquery.min.js', 'public/js')
 
     .js('resources/js/popper.min.js', 'public/js')
     .js('resources/js/jquery.easing.1.3.js', 'public/js')
+    .js('resources/js/jquery-migrate-3.0.1.min.js', 'public/js')
     .js('resources/js/jquery.waypoints.min.js', 'public/js')
     .js('resources/js/jquery.stellar.min.js', 'public/js')
     .js('resources/js/owl.carousel.min.js', 'public/js')
-    .js('resources/js/jquery.magnific-popup.min.js', 'public/js')
+
     .js('resources/js/aos.js', 'public/js')
     .js('resources/js/jquery.animateNumber.min.js', 'public/js')
     .js('resources/js/bootstrap-datepicker.js', 'public/js')
     .js('resources/js/jquery.timepicker.min.js', 'public/js')
-    .js('resources/js/scrollax.min.js', 'public/js')
     .js('resources/js/main.js', 'public/js')
+    // .js('resources/js/jquery.magnific-popup.min.js', 'public/js')
+    .js('resources/js/scrollax.min.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .styles('resources/css/animate.css', 'public/css/animate.css')
     .styles('resources/css/owl.carousel.min.css', 'public/css/owl.carousel.min.css')

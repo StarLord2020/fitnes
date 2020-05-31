@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     {{--<link rel="stylesheet" href="{{}}css/open-iconic-bootstrap.min.css">--}}
@@ -51,7 +52,7 @@
                 <div class="container">
                     <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
-                        <div class="col-sm-6 ftco-animate text-center">
+                        <div class="col-sm-6  text-center">
                             <h1 class="mb-4">Fuel Your Body Fitness</h1>
                             <h2 class="subheading">Be One Of Us</h2>
                         </div>
@@ -65,7 +66,7 @@
                 <div class="container">
                     <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
-                        <div class="col-sm-7 ftco-animate text-center">
+                        <div class="col-sm-7 text-center">
                             <h1 class="mb-4">Challenge Yourself</h1>
                             <h2 class="subheading">Get Your Body Fit</h2>
                         </div>
@@ -80,16 +81,16 @@
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-xl-6 d-flex align-self-stretch">
-                        <div class="align-self-stretch"><img src="images/about.jpg" class="img-fluid" alt=""></div>
+                        <div class="align-self-stretch"><img src="/images/about.jpg" class="img-fluid" alt=""></div>
                     </div>
                     <div class="col-xl-6 align-self-stretch pt-5">
                         <div class="row justify-content-center mb-3">
-                            <div class="col-md-12 heading-section ftco-animate">
+                            <div class="col-md-12 heading-section ">
                                 <h3 class="subheading">Shape Your Body</h3>
                                 <h2 class="mb-4">What We Do?</h2>
                             </div>
                         </div>
-                        <div class="services d-flex ftco-animate">
+                        <div class="services d-flex ">
                             <div class="icon d-flex justify-content-center align-items-center">
                                 <span class="flaticon-ruler"></span>
                             </div>
@@ -98,7 +99,7 @@
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
                             </div>
                         </div>
-                        <div class="services d-flex ftco-animate">
+                        <div class="services d-flex ">
                             <div class="icon d-flex justify-content-center align-items-center">
                                 <span class="flaticon-gym"></span>
                             </div>
@@ -107,7 +108,7 @@
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
                             </div>
                         </div>
-                        <div class="services d-flex ftco-animate">
+                        <div class="services d-flex ">
                             <div class="icon d-flex justify-content-center align-items-center">
                                 <span class="flaticon-tools-and-utensils"></span>
                             </div>
@@ -116,7 +117,7 @@
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
                             </div>
                         </div>
-                        <div class="services d-flex ftco-animate">
+                        <div class="services d-flex ">
                             <div class="icon d-flex justify-content-center align-items-center">
                                 <span class="flaticon-abs"></span>
                             </div>
@@ -136,34 +137,34 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <div class="row">
-                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ">
                                 <div class="block-18 text-center">
                                     <div class="text">
-                                        <strong class="number" data-number="5000">0</strong>
+                                        <strong class="number" data-number="5000">450</strong>
                                         <span>Happy Customers</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ">
                                 <div class="block-18 text-center">
                                     <div class="text">
-                                        <strong class="number" data-number="4560">0</strong>
+                                        <strong class="number" data-number="4560">200</strong>
                                         <span>Perfect Bodies</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ">
                                 <div class="block-18 text-center">
                                     <div class="text">
-                                        <strong class="number" data-number="570">0</strong>
+                                        <strong class="number" data-number="570">100</strong>
                                         <span>Working Hours</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ">
                                 <div class="block-18 text-center">
                                     <div class="text">
-                                        <strong class="number" data-number="900">0</strong>
+                                        <strong class="number" data-number="900">50</strong>
                                         <span>Success Stories</span>
                                     </div>
                                 </div>
@@ -180,8 +181,8 @@
                     <span class="icon-play"></a>
                 </a>
             </div>
-            <div class="one-half ftco-animate">
-                <div class="heading-section ftco-animate ">
+            <div class="one-half ">
+                <div class="heading-section ">
                     <h3 class="subheading">About Muscle</h3>
                     <h2 class="mb-5">Welcome <br>To Our Gym</h2>
                 </div>
@@ -194,7 +195,7 @@
         <section class="ftco-section bg-light">
             <div class="container-fluid">
                 <div class="row justify-content-center mb-5">
-                    <div class="col-md-7 heading-section text-center ftco-animate">
+                    <div class="col-md-7 heading-section text-center ">
                         <h3 class="subheading">Shape Your Body</h3>
                         <h2 class="mb-1">Our Coaches</h2>
                     </div>
@@ -203,14 +204,14 @@
                     <div class="col-lg-3 d-flex">
                         <div class="coach align-items-stretch">
                             <div class="img" style="background-image: url(/images/trainer-1.jpg);"></div>
-                            <div class="text bg-white p-4 ftco-animate">
+                            <div class="text bg-white p-4 ">
                                 <span class="subheading">Owner / Head Coach</span>
                                 <h3><a href="#">Mark Brook</a></h3>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                                 <ul class="ftco-social-media d-flex mt-4">
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
                                 </ul>
                                 <p></p>
                             </div>
@@ -219,14 +220,14 @@
                     <div class="col-lg-3 d-flex">
                         <div class="coach d-md-flex flex-column-reverse align-items-stretch">
                             <div class="img" style="background-image: url(/images/trainer-2.jpg);"></div>
-                            <div class="text bg-white p-4 ftco-animate">
+                            <div class="text bg-white p-4 ">
                                 <span class="subheading">Owner / Head Coach</span>
                                 <h3><a href="#">Sarah Henderson</a></h3>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                                 <ul class="ftco-social-media d-flex mt-4">
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
                                 </ul>
                                 <p></p>
                             </div>
@@ -235,14 +236,14 @@
                     <div class="col-lg-3 d-flex">
                         <div class="coach align-items-stretch">
                             <div class="img" style="background-image: url(/images/trainer-3.jpg);"></div>
-                            <div class="text bg-white p-4 ftco-animate">
+                            <div class="text bg-white p-4 ">
                                 <span class="subheading">Owner / Head Coach</span>
                                 <h3><a href="#">George Hump</a></h3>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                                 <ul class="ftco-social-media d-flex mt-4">
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
                                 </ul>
                                 <p></p>
                             </div>
@@ -251,14 +252,14 @@
                     <div class="col-lg-3 d-flex">
                         <div class="coach d-md-flex flex-column-reverse align-items-stretch">
                             <div class="img" style="background-image: url(/images/trainer-4.jpg);"></div>
-                            <div class="text bg-white p-4 ftco-animate">
+                            <div class="text bg-white p-4 ">
                                 <span class="subheading">Owner / Head Coach</span>
                                 <h3><a href="#">Victor Hump</a></h3>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                                 <ul class="ftco-social-media d-flex mt-4">
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
+                                    <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
                                 </ul>
                                 <p></p>
                             </div>
@@ -271,16 +272,16 @@
         <section class="ftco-section">
             <div class="container-fluid">
                 <div class="row justify-content-center mb-5 pb-3">
-                    <div class="col-md-7 heading-section ftco-animate text-center">
+                    <div class="col-md-7 heading-section  text-center">
                         <h3 class="subheading">Gym Classes</h3>
                         <h2 class="mb-1">Workout Classes</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3">
-                        <div class="package-program ftco-animate">
+                        <div class="package-program ">
                             <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-1.jpg);">
-                                <span>Learn More</span>
+
                             </a>
                             <div class="text mt-3">
                                 <h3><a href="#">Body Building</a></h3>
@@ -289,9 +290,9 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="package-program ftco-animate">
+                        <div class="package-program">
                             <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(/images/program-2.jpg);">
-                                <span>Learn More</span>
+
                             </a>
                             <div class="text mt-3">
                                 <h3><a href="#">Aerobic Classes</a></h3>
@@ -300,9 +301,9 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="package-program ftco-animate">
+                        <div class="package-program ">
                             <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(/images/program-3.jpg);">
-                                <span>Learn More</span>
+
                             </a>
                             <div class="text mt-3">
                                 <h3><a href="#">Weight Lifting</a></h3>
@@ -311,9 +312,9 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <div class="package-program ftco-animate">
+                        <div class="package-program ">
                             <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(/images/program-4.jpg);">
-                                <span>Learn More</span>
+
                             </a>
                             <div class="text mt-3">
                                 <h3><a href="#">Yoga Classes</a></h3>
@@ -324,7 +325,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row mt-4 justify-content-center ftco-animate">
+                <div class="row mt-4 justify-content-center">
                     <div class="col-md-4 text-center">
                         <a href="#" class="btn-custom py-4">View More Program <span class="ion-ios-arrow-down ml-2"></span></a>
                     </div>
@@ -336,13 +337,13 @@
         <section class="ftco-section bg-light">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-3">
-                    <div class="col-md-7 heading-section ftco-animate text-center">
+                    <div class="col-md-7 heading-section  text-center">
                         <h3 class="subheading">Pricing Tables</h3>
                         <h2 class="mb-1">Membership Plans</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 ftco-animate">
+                    <div class="col-md-4 ">
                         <div class="block-7">
                             <div class="text-center">
                                 <h2 class="heading">One Day Training</h2>
@@ -361,7 +362,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 ftco-animate">
+                    <div class="col-md-4 ">
                         <div class="block-7">
                             <div class="text-center">
                                 <h2 class="heading">Pay Every Month</h2>
@@ -380,7 +381,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 ftco-animate">
+                    <div class="col-md-4">
                         <div class="block-7">
                             <div class="text-center">
                                 <h2 class="heading">1 Year Membership</h2>
@@ -406,12 +407,12 @@
         <section class="ftco-section testimony-section">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-3">
-                    <div class="col-md-7 heading-section ftco-animate text-center">
+                    <div class="col-md-7 heading-section  text-center">
                         <h3 class="subheading">Testimony</h3>
                         <h2 class="mb-1">Successful Stories</h2>
                     </div>
                 </div>
-                <div class="row ftco-animate">
+                <div class="row ">
                     <div class="col-md-12">
                         <div class="carousel-testimony owl-carousel">
                             <div class="item">
@@ -518,13 +519,13 @@
         <section class="ftco-section bg-light">
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-3">
-                    <div class="col-md-7 heading-section ftco-animate text-center">
+                    <div class="col-md-7 heading-section  text-center">
                         <h3 class="subheading">Articles</h3>
                         <h2 class="mb-1">Recent Blog</h2>
                     </div>
                 </div>
                 <div class="row d-flex">
-                    <div class="col-md-4 d-flex ftco-animate">
+                    <div class="col-md-4 d-flex ">
                         <div class="blog-entry justify-content-end">
                             <a href="blog-single.html" class="block-20" style="background-image: url('/images/image_1.jpg');">
                             </a>
@@ -539,7 +540,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex ftco-animate">
+                    <div class="col-md-4 d-flex ">
                         <div class="blog-entry justify-content-end">
                             <a href="blog-single.html" class="block-20" style="background-image: url('/images/image_2.jpg');">
                             </a>
@@ -554,7 +555,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex ftco-animate">
+                    <div class="col-md-4 d-flex ">
                         <div class="blog-entry">
                             <a href="blog-single.html" class="block-20" style="background-image: url('/images/image_3.jpg');">
                             </a>
@@ -579,7 +580,7 @@
                 <div class="row no-gutters d-md-flex align-items-center">
                     <div class="col-md-6 d-flex align-self-stretch img" style="background-image: url(/images/about-3.jpg);">
                     </div>
-                    <div class="col-md-6 appointment ftco-animate">
+                    <div class="col-md-6 appointment ">
                         <h3 class="mb-3">Book a Appointment</h3>
                         <form action="#" class="appointment-form">
                             <div class="d-md-flex">
@@ -593,14 +594,16 @@
                             <div class="d-md-flex">
                                 <div class="form-group">
                                     <div class="input-wrap">
-                                        <div class="icon"><span class="ion-md-calendar"></span></div>
-                                        <input type="text" class="form-control appointment_date" placeholder="Date">
+
+
+                                        <input type="date" id="start" class="form-control appointment_datedd" name="trip-start"
+                                               value="2018-07-22"
+                                               min="2018-01-01" max="2018-12-31">
                                     </div>
                                 </div>
                                 <div class="form-group ml-md-4">
                                     <div class="input-wrap">
-                                        <div class="icon"><span class="ion-ios-clock"></span></div>
-                                        <input type="text" class="form-control appointment_time" placeholder="Time">
+                                        <input type="text" class="form-control timepicker" placeholder="Time">
                                     </div>
                                 </div>
                                 <div class="form-group ml-md-4">
@@ -624,59 +627,59 @@
         <section class="ftco-gallery">
             <div class="container-wrap">
                 <div class="row no-gutters">
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ">
                         <div class="gallery ftco-gradient d-flex justify-content-center align-items-center">
                             <div class="row justify-content-center">
-                                <div class="col-md-12 heading-section ftco-animate text-center">
+                                <div class="col-md-12 heading-section text-center">
                                     <h3 class="subheading">Gallery Photo</h3>
                                     <h2 class="mb-1">Instagram</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ">
                         <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-2.jpg);">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-instagram"></span>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ">
                         <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-3.jpg);">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-instagram"></span>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ">
                         <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-4.jpg);">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-instagram"></span>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ">
                         <a href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-5.jpg);">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-instagram"></span>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ">
                         <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-6.jpg);">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-instagram"></span>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ">
                         <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-7.jpg);">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-instagram"></span>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ">
                         <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-8.jpg);">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-instagram"></span>
@@ -697,9 +700,9 @@
                             <h2 class="ftco-heading-2">About Us</h2>
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                                <li class=""><a href="#"><span class="icon-twitter"></span></a></li>
+                                <li class=""><a href="#"><span class="icon-facebook"></span></a></li>
+                                <li class=""><a href="#"><span class="icon-instagram"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -707,7 +710,7 @@
                         <div class="ftco-footer-widget mb-4">
                             <h2 class="ftco-heading-2">Recent Blog</h2>
                             <div class="block-21 mb-4 d-flex">
-                                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                                <a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
                                 <div class="text">
                                     <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                                     <div class="meta">
@@ -718,7 +721,7 @@
                                 </div>
                             </div>
                             <div class="block-21 mb-4 d-flex">
-                                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                                <a class="blog-img mr-4" style="background-image: url(/images/image_2.jpg);"></a>
                                 <div class="text">
                                     <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                                     <div class="meta">
@@ -764,23 +767,46 @@
                 </div>
             </div>
         </footer>
-        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+{{--        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>--}}
     </div>
+
     <script src="{{mix('js/app.js')}}"></script>
     <script src="{{mix('js/jquery.min.js')}}"></script>
     <script src="{{mix('js/popper.min.js')}}"></script>
     <script src="{{mix('js/jquery.easing.1.3.js')}}"></script>
     <script src="{{mix('js/jquery.waypoints.min.js')}}"></script>
     <script src="{{mix('js/jquery.stellar.min.js')}}"></script>
+    <script src="{{mix('js/jquery-migrate-3.0.1.min.js')}}"></script>
     <script src="{{mix('js/owl.carousel.min.js')}}"></script>
-    <script src="{{mix('js/jquery.magnific-popup.min.js')}}"></script>
+
     <script src="{{mix('js/aos.js')}}"></script>
     <script src="{{mix('js/jquery.animateNumber.min.js')}}"></script>
-    {{--<script src="{{mix('js/bootstrap-datepicker.js')}}"></script>--}}
-    {{--<script src="{{mix('js/jquery.timepicker.min.js')}}"></script>--}}
-    {{--<script src="{{mix('js/scrollax.min.js')}}"></script>--}}
-    {{----}}
-    {{--<script src="{{mix('js/main.js')}}"></script>--}}
+    <script src="{{mix('js/bootstrap-datepicker.js')}}"></script>
+    <script src="{{mix('js/jquery.timepicker.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+{{--    <script src="{{mix('js/jquery.magnific-popup.min.js')}}"></script>--}}
+    <script src="{{mix('js/scrollax.min.js')}}"></script>
 
+    <script src="{{mix('js/main.js')}}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script>
+
+        $('.timepicker').timepicker({
+            timeFormat: 'HH:mm',
+            interval:10,
+            minTime: '10',
+            maxTime: '6:00pm',
+            defaultTime: '11',
+            startTime: '10:00',
+            dynamic: false,
+            dropdown: true,
+            scrollbar: true
+        });
+
+    </script>
+    <style>
+
+        /*dfdsf*/
+    </style>
 </body>
 </html>
