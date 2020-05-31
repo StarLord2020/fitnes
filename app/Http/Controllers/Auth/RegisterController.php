@@ -54,7 +54,7 @@ class RegisterController extends Controller
         });
 
         Validator::replacer('number', function($message, $attribute, $rule, $parameters) {
-            return str_replace(':attribute',$attribute, ':attribute is invalid phone number');
+            return str_replace(':attribute',$attribute, 'Невірний номер телефону');
         });
         return Validator::make($data, [
             'surname' => ['required', 'string', 'max:255'],
