@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -21,9 +22,11 @@ class ClientController extends Controller
         return view('client.program');
     }
 
-    public function  coaches(){
+    public function  coaches()
+    {
+        $coaches = User::where('role','Тренер')->paginate(8);
 
-        return view('client.coaches');
+        return view('client.coaches',compact('coaches'));
     }
 
     public function  schedule(){
