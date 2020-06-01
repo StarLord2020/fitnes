@@ -328,7 +328,7 @@ jQuery.extend(jQuery.easing, {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\OSPanel\domains\fitnes\resources\js\jquery.easing.1.3.js */"./resources/js/jquery.easing.1.3.js");
+module.exports = __webpack_require__(/*! D:\openServer\OSPanel\domains\diplom2\project\resources\js\jquery.easing.1.3.js */"./resources/js/jquery.easing.1.3.js");
 
 
 /***/ })

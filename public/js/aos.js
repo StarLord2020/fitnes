@@ -740,7 +740,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\OSPanel\domains\fitnes\resources\js\aos.js */"./resources/js/aos.js");
+module.exports = __webpack_require__(/*! D:\openServer\OSPanel\domains\diplom2\project\resources\js\aos.js */"./resources/js/aos.js");
 
 
 /***/ })
