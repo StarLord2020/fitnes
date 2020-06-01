@@ -17,7 +17,17 @@ Route::get('/', function () {
     return ;
 })->middleware('auth');
 
-Route::get('/client','ClientController@main');
+
+Route::name('client.')
+    ->prefix('client')
+    ->group(function () {
+        Route::get('/','ClientController@home');
+        Route::get('/order','ClientController@order');
+        Route::get('/program','ClientController@program');
+        Route::get('/coaches','ClientController@coaches');
+        Route::get('/schedule','ClientController@schedule');
+        Route::get('/contacts','ClientController@contacts');
+    });
 
 Auth::routes();
 Route::name('admin.')

@@ -6,8 +6,33 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    public function main() {
+    public function home() {
 
-        return view('client.layouts.index');
+        return view('client.home');
+    }
+
+    public function  order(){
+
+        return view('client.order');
+    }
+
+    public function  program(){
+
+        return view('client.program');
+    }
+
+    public function  coaches(){
+
+        return view('client.coaches');
+    }
+
+    public function  schedule(){
+
+        return view('client.schedule');
+    }
+
+    public function  contacts(){
+
+        return view('client.contacts');
     }
 }
