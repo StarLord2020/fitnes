@@ -23,8 +23,13 @@ class UserController extends Controller
     }
     public function store(StoreRequest $request)
     {
+        $user=$request->all();
+        if ($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
 
-        User::create($request->all());
+            $user['avatar'] = $file->store('avatars', 'public');
+        }
+        User::create($user);
 
         return response('ok',200);
     }
@@ -35,7 +40,7 @@ class UserController extends Controller
         return view('admin.user.edit', compact('user'));
     }
 
-    public function update(UpdateRequest $request, User $user)
+        public function update(UpdateRequest $request, User $user)
     {
         $data = $request->only(['surname',
             'name',
@@ -46,6 +51,9 @@ class UserController extends Controller
             'address',
             'number',
             'password',
+            'description',
+            'avatar',
+
         ]);
 
 
@@ -58,6 +66,17 @@ class UserController extends Controller
             unset($data['password']);
         }
 
+        if ($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
+            $data['avatar'] = $file->store('avatars', 'public');
+
+        } else {
+            if ($request['resetImage']) {
+
+                $data['avatar'] = "";
+
+            }
+        }
         $user->update($data);
 
         return ['response'=>'updated'];

@@ -36,6 +36,6 @@ Route::name('admin.')
     ->group(function () {
         Route::view('/','admin.index');
         Route::resource('user', 'UserController');
-//        Route::put("user/{user} ",'UserController@update');
+        Route::post("user-update/{user} ",'UserController@update');
     });
 Route::get('/home', 'HomeController@index')->name('home');

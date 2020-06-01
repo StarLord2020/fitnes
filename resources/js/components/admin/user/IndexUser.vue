@@ -17,6 +17,7 @@
                     { key: 'surname', label: 'Фамилия', sortable: true,sortDirection: 'desc', class: 'text-center' },
                     { key: 'name', label: 'Имя', sortable: true, sortDirection: 'desc' ,class: 'text-center'},
                     { key: 'patronymic', label: 'Отчество', sortable: true, sortDirection: 'desc',class: 'text-center' },
+                    { key: 'description', label: 'Описание', sortable: true, sortDirection: 'desc',class: 'text-center' },
                     { key: 'email', label: 'email', sortable: true, sortDirection: 'desc',class: 'text-center' },
                     { key: 'number', label: 'Номер телефона', sortable: true, sortDirection: 'desc',class: 'text-center' },
                     { key: 'address', label: 'Адресс', sortable: true, sortDirection: 'desc',class: 'text-center' },

@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','surname','patronymic','number','role','email', 'password','address','sex',
+        'name','surname','patronymic','number','role','email', 'password','address','sex','description','avatar'
     ];
 
     /**
@@ -40,7 +40,7 @@ class User extends Authenticatable
     public function getAll()
     {
         return DB::table('users')
-            ->where('role','<>','Адмін')
+//            ->where('role','<>','Адмін')
             ->get();
     }
 }

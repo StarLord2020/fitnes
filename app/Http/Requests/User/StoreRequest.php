@@ -31,6 +31,8 @@ class StoreRequest extends FormRequest
             'number' => 'required|max:13',
             'address' => 'required|max:255',
             'sex' => 'required',
+            'description' => 'required',
+            'avatar' => 'nullable|mimes:jpeg,bmp,png|max:2056',
             'role' => 'required|not_in:none',
             'password' =>"required|max:20"
         ];

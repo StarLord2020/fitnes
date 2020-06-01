@@ -23,6 +23,7 @@ class UpdateRequest extends FormRequest
      */
     public function rules()
     {
+
         $rules = [
             'name' => 'required|max:20',
             'surname' => 'required|max:20',
@@ -32,6 +33,8 @@ class UpdateRequest extends FormRequest
             'address' => 'required|max:255',
             'sex' => 'required',
             'role' => 'required',
+            'description' => 'required',
+            'avatar' => 'nullable|mimes:jpeg,bmp,png|max:2056',
             'password' =>"nullable|max:20"
         ];
 

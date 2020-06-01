@@ -1,8 +1,15 @@
 <template>
     <div>
     <div class="form_container">
-        <form class="form-horizontal" role="form" id="form" @submit.prevent="sendUser">
-            <span class="d-block mb-4 title">Додавання користувача</span>
+        <form  ref="user" class="form-horizontal" role="form" id="form" @submit.prevent="sendUser">
+            <div class="row">
+               <div class="col-9">
+                   <span class="d-block mb-4 title">Додавання користувача</span>
+               </div>
+                <div class="col-3">
+                    <avatar-load></avatar-load>
+                </div>
+            </div>
             <div class="form-group">
                 <div class="row">
                     <label for="firstName" class="col-sm-4 control-label">Прізвище</label>
@@ -151,6 +158,24 @@
             </div>
             <div class="form-group">
                 <div class="row">
+                    <label class="col-md-4 control-label" for="address">Описание</label>
+                    <div class="col-md-8">
+                        <textarea
+                            v-validate="'required|max:255'"
+                            :class="{'input': true, 'alert-danger':errors.has('description')}"
+                            name="description"
+                            class="form-control"
+                            id="description"
+                            placeholder="Описание"
+                            v-model="user.description"
+                        >
+                        </textarea>
+                        <span v-show="errors.has('description')" class="help is-danger">{{ errors.first('description') }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
                     <label class="col-md-4 control-label" for="address">Адреса</label>
                     <div class="col-md-8">
                         <textarea
@@ -199,28 +224,6 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <label>Вкажіть роль</label>
-                    </div>
-                    <div class="form-group col-sm-8">
-                        <select
-                            v-validate="'excluded:none'"
-                            :class="{'input': true, 'alert-danger':errors.has('role')}"
-                            name="role"
-                            id="inputState"
-                            class="form-control"
-                            v-model="user.role"
-                        >
-                            <option selected value="none">Вкажіть роль</option>
-                            <option>Тренер</option>
-                            <option>Клієнт</option>
-                        </select>
-                        <span v-show="errors.has('role')" class="help is-danger">{{ errors.first('role') }}</span>
-                    </div>
-                </div>
-            </div>
             <!--<input type="file" name="image" v-model="user.file">-->
             <button type="submit" class="btn btn-primary btn-block">Додати</button>
         </form> <!-- /form -->
@@ -230,8 +233,12 @@
 </template>
 
 <script>
+    import AvatarLoad from './../AvatarLoad'
     export default {
         name: "CreateUser",
+        components:{
+            AvatarLoad,
+        },
         data(){
             return {
                 user:{
@@ -243,7 +250,8 @@
                     address:'',
                     sex:'',
                     password:'',
-                    role:'none'
+                    description:'',
+
                 },
                 visibleConfirmPassword:false,
                 visiblePassword:false,
@@ -252,11 +260,6 @@
             }
         },
         methods: {
-            changeDateFormat(value)
-            {
-                console.log(value);
-                return true;
-            },
             showPassword(){
                 this.visiblePassword = !this.visiblePassword;
                 this.$refs.password.type=this.visiblePassword?'text':'password';
@@ -281,7 +284,14 @@
                 console.log(this.user);
                 this.$validator.validateAll().then((result) => {
                     if (result) {
-                        axios.post('/admin/user',this.user)
+                        const data = new FormData(this.$refs.user);
+                        data.append('role','Тренер');
+                        axios.post('/admin/user',data,
+                            {
+                                headers: {
+                                    'Content-Type': 'multipart/form-data'
+                                }
+                            })
                             .then((response)=>{
                                 if(response.data == 'ok'){
 
@@ -358,6 +368,6 @@
      border-radius:10px;
  }
  .title {
-     font-size: 30px;
+     font-size: 26px;
  }
 </style>

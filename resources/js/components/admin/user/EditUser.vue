@@ -1,8 +1,15 @@
 <template>
     <div>
         <div class="form_container">
-            <form class="form-horizontal" role="form" id="form" @submit.prevent="sendUser">
-                <span class="d-block mb-4 title">Додавання користувача</span>
+            <form ref="user" class="form-horizontal" role="form" id="form" @submit.prevent="edit">
+                <div class="row">
+                    <div class="col-9">
+                        <span class="d-block mb-4 title">Редагування користувача</span>
+                    </div>
+                    <div class="col-3">
+                        <avatar-load :update="true" :src="user.avatar"></avatar-load>
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="row">
                         <label for="firstName" class="col-sm-4 control-label">Прізвище</label>
@@ -15,7 +22,7 @@
                                 id="firstName"
                                 placeholder="Фамилия"
                                 class="form-control"
-                                v-model="user.surname"
+                                v-model="editUser.surname"
                             >
                             <span v-show="errors.has('surname')" class="help is-danger">{{ errors.first('surname') }}</span>
                         </div>
@@ -33,7 +40,7 @@
                                 id="middleName"
                                 placeholder="Имя"
                                 class="form-control"
-                                v-model="user.name"
+                                v-model="editUser.name"
                             >
                             <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
                         </div>
@@ -51,7 +58,7 @@
                                 id="lastName"
                                 placeholder="Отчество"
                                 class="form-control"
-                                v-model="user.patronymic"
+                                v-model="editUser.patronymic"
                             >
                             <span v-show="errors.has('patronymic')" class="help is-danger">{{ errors.first('patronymic') }}</span>
                         </div>
@@ -69,11 +76,28 @@
                                 id="email"
                                 placeholder="Email"
                                 class="form-control"
-                                v-model="user.email"
+                                v-model="editUser.email"
                             >
                             <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
                         </div>
-
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label class="col-md-4 control-label" for="address">Описание</label>
+                        <div class="col-md-8">
+                        <textarea
+                            v-validate="'required|max:255'"
+                            :class="{'input': true, 'alert-danger':errors.has('description')}"
+                            name="description"
+                            class="form-control"
+                            id="description"
+                            placeholder="Описание"
+                            v-model="user.description"
+                        >
+                        </textarea>
+                            <span v-show="errors.has('description')" class="help is-danger">{{ errors.first('description') }}</span>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -81,23 +105,23 @@
                         <label for="password" class="col-sm-4 control-label">Пароль</label>
                         <div class="col-sm-8 position-relative">
                             <input
-                                v-validate="'required|max:20'"
+                                v-validate="'min:8|max:16'"
                                 :class="{'input': true, 'alert-danger':errors.has('password')}"
                                 name="password"
                                 type="password"
                                 id="password"
                                 placeholder="Пароль"
                                 class="form-control password"
-                                v-model="user.password"
+                                v-model="editUser.password"
                                 ref="password"
                                 oncopy="return false"
                             >
                             <div class="visible position-absolute" @click="showPassword()">
-                                <b-icon-eye-fill v-if="!visiblePassword&&user.password"></b-icon-eye-fill>
-                                <b-icon-eye-slash-fill v-if="visiblePassword&&user.password"></b-icon-eye-slash-fill>
+                                <b-icon-eye-fill v-if="!visiblePassword&&editUser.password"></b-icon-eye-fill>
+                                <b-icon-eye-slash-fill v-if="visiblePassword&&editUser.password"></b-icon-eye-slash-fill>
                             </div>
                             <b-icon-arrow-repeat
-                                v-if="!user.password"
+                                v-if="!editUser.password"
                                 @click="genPassword()"
                                 class="rand-password"
                             >
@@ -108,10 +132,10 @@
                 </div>
                 <div class="form-group">
                     <div class="row">
-                        <label for="confirm-password" class="col-sm-4 control-label">Підтвердження пароля</label>
+                        <label for="confirm-password" class="col-sm-4 control-label">Подтверждение пароля</label>
                         <div class="col-sm-8 position-relative">
                             <input
-                                v-validate="'required|confirmed:password'"
+                                v-validate="'confirmed:password|'+(editUser.password ? 'required' : '')"
                                 :class="{'input': true, 'alert-danger':errors.has('confirm-password')}"
                                 name="confirm-password"
                                 type="password"
@@ -125,7 +149,7 @@
                                 <b-icon-eye-fill v-if="!visibleConfirmPassword"></b-icon-eye-fill>
                                 <b-icon-eye-slash-fill v-if="visibleConfirmPassword" ></b-icon-eye-slash-fill>
                             </div>
-                            <span v-show="errors.has('confirm-password')" class="help is-danger">Паролі не совдают</span>
+                            <span v-show="errors.has('confirm-password')" class="help is-danger">Пароли не совпадают</span>
                         </div>
                     </div>
                 </div>
@@ -134,7 +158,7 @@
                         <label for="phoneNumber" class="col-sm-4 control-label">Номер телефону</label>
                         <div class="col-sm-8">
                             <input
-                                @keyup="phoneValidator(user.number)"
+                                @keyup="phoneValidator(editUser.number)"
                                 v-validate="'required|max:17'"
                                 :class="{'input': true, 'alert-danger':errors.has('number')}"
                                 name="number"
@@ -142,7 +166,7 @@
                                 id="phoneNumber"
                                 placeholder="Номер телефона"
                                 class="form-control"
-                                v-model="user.number"
+                                v-model="editUser.number"
                             >
                             <span v-show="errors.has('number')" class="help is-danger">{{ errors.first('number') }}</span>
                             <span v-if="errorNumber" class="help is-danger">Не є дійсним номером телефону</span>
@@ -160,7 +184,7 @@
                             class="form-control"
                             id="address"
                             placeholder="Адресс"
-                            v-model="user.address"
+                            v-model="editUser.address"
                         >
                         </textarea>
                             <span v-show="errors.has('address')" class="help is-danger">{{ errors.first('address') }}</span>
@@ -179,7 +203,7 @@
                                     type="radio"
                                     id="femaleRadio"
                                     value="Женщина"
-                                    v-model="user.sex"
+                                    v-model="editUser.sex"
                                 >
                                 Женский
                             </label>
@@ -191,7 +215,7 @@
                                     type="radio"
                                     id="maleRadio"
                                     value="Мужчина"
-                                    v-model="user.sex"
+                                    v-model="editUser.sex"
                                 >
                                 Мужской
                             </label>
@@ -199,30 +223,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <label>Вкажіть роль</label>
-                        </div>
-                        <div class="form-group col-sm-8">
-                            <select
-                                v-validate="'excluded:none'"
-                                :class="{'input': true, 'alert-danger':errors.has('role')}"
-                                name="role"
-                                id="inputState"
-                                class="form-control"
-                                v-model="user.role"
-                            >
-                                <option selected value="none">Вкажіть роль</option>
-                                <option>Тренер</option>
-                                <option>Клієнт</option>
-                            </select>
-                            <span v-show="errors.has('role')" class="help is-danger">{{ errors.first('role') }}</span>
-                        </div>
-                    </div>
-                </div>
                 <!--<input type="file" name="image" v-model="user.file">-->
-                <button type="submit" class="btn btn-primary btn-block">Додати</button>
+                <button type="submit" class="btn btn-primary btn-block">Редагувати</button>
             </form> <!-- /form -->
 
         </div>
@@ -230,9 +232,13 @@
 </template>
 
 <script>
+    import AvatarLoad from './../AvatarLoad'
     export default {
         name: "EditUser",
         props:['user'],
+        components:{
+            AvatarLoad,
+        },
         data(){
             return {
                 editUser:{
@@ -244,7 +250,7 @@
                     address:'',
                     sex:'',
                     password:'',
-                    role:'none'
+                    description:'',
                 },
                 visibleConfirmPassword:false,
                 visiblePassword:false,
@@ -277,11 +283,20 @@
                 this.editUser.password = password;
                 this.confirmPassword = password;
             },
-        sendUser(){
+        edit(){
             this.$validator.validateAll().then((result) => {
                 if (result) {
-                        axios.put('/admin/user/' + this.user.id, this.editUser)
-                            .then((response) => {
+                    const data = new FormData(document.getElementById('form'));
+                   data.append('id', this.user.id);
+                    data.append('role','Тренер');
+
+                    axios.post('/admin/user-update/' + this.user.id, data,
+                        {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        })
+                        .then((response) => {
                                 if (response.data.response == 'updated') {
 
                                     this.$toaster.success('Данные успешно отредактированы');
@@ -348,6 +363,6 @@
         border-radius:10px;
     }
     .title {
-        font-size: 30px;
+        font-size: 26px;
     }
 </style>
