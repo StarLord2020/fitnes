@@ -40,7 +40,7 @@ class User extends Authenticatable
     public function getAll()
     {
         return DB::table('users')
-//            ->where('role','<>','Адмін')
+            ->where('role','=','Тренер')
             ->get();
     }
 }
