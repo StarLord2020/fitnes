@@ -5,7 +5,8 @@
         <div class="slider-item js-fullheight" style="background-image: url(/images/bg_1.jpg);">
             <div class="overlay"></div>
             <div class="container">
-                <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
+                <div class="row slider-text js-fullheight justify-content-center align-items-center"
+                     data-scrollax-parent="true">
 
                     <div class="col-sm-6  text-center">
                         <h1 class="mb-4">Fuel Your Body Fitness</h1>
@@ -19,7 +20,8 @@
         <div class="slider-item js-fullheight" style="background-image: url(/images/bg_2.jpg);">
             <div class="overlay"></div>
             <div class="container">
-                <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
+                <div class="row slider-text js-fullheight justify-content-center align-items-center"
+                     data-scrollax-parent="true">
 
                     <div class="col-sm-7 text-center">
                         <h1 class="mb-4">Challenge Yourself</h1>
@@ -51,7 +53,8 @@
                         </div>
                         <div class="text ml-5">
                             <h3>Analyze Your Goal</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country</p>
                         </div>
                     </div>
                     <div class="services d-flex ">
@@ -60,7 +63,8 @@
                         </div>
                         <div class="text ml-5">
                             <h3>Work Hard On It</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country</p>
                         </div>
                     </div>
                     <div class="services d-flex ">
@@ -69,7 +73,8 @@
                         </div>
                         <div class="text ml-5">
                             <h3>Improve Your Performance</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country</p>
                         </div>
                     </div>
                     <div class="services d-flex ">
@@ -78,7 +83,8 @@
                         </div>
                         <div class="text ml-5">
                             <h3>Achieve Your Perfect Body</h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country</p>
                         </div>
                     </div>
                 </div>
@@ -86,7 +92,8 @@
         </div>
     </section>
 
-    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(/images/bg_2.jpg);" data-stellar-background-ratio="0.5">
+    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(/images/bg_2.jpg);"
+             data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -139,7 +146,12 @@
                 <h2 class="mb-5">Welcome <br>To Our Gym</h2>
             </div>
             <div>
-                <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+                <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would
+                    have been rewritten a thousand times and everything that was left from its origin would be the word
+                    "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing
+                    the copy said could convince her and so it didn’t take long until a few insidious Copy Writers
+                    ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they
+                    abused her for their.</p>
             </div>
         </div>
     </section>
@@ -159,11 +171,19 @@
                         <div class="text bg-white p-4 ">
                             <span class="subheading">Owner / Head Coach</span>
                             <h3><a href="#">Mark Brook</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                                your mouth.</p>
                             <ul class="ftco-social-media d-flex mt-4">
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-twitter"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-facebook"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-instagram"></span></a></li>
                             </ul>
                             <p></p>
                         </div>
@@ -175,11 +195,19 @@
                         <div class="text bg-white p-4 ">
                             <span class="subheading">Owner / Head Coach</span>
                             <h3><a href="#">Sarah Henderson</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                                your mouth.</p>
                             <ul class="ftco-social-media d-flex mt-4">
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-twitter"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-facebook"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-instagram"></span></a></li>
                             </ul>
                             <p></p>
                         </div>
@@ -191,11 +219,19 @@
                         <div class="text bg-white p-4 ">
                             <span class="subheading">Owner / Head Coach</span>
                             <h3><a href="#">George Hump</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                                your mouth.</p>
                             <ul class="ftco-social-media d-flex mt-4">
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-twitter"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-facebook"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-instagram"></span></a></li>
                             </ul>
                             <p></p>
                         </div>
@@ -207,11 +243,19 @@
                         <div class="text bg-white p-4 ">
                             <span class="subheading">Owner / Head Coach</span>
                             <h3><a href="#">Victor Hump</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                                your mouth.</p>
                             <ul class="ftco-social-media d-flex mt-4">
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                                <li class=""><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-twitter"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-facebook"></span></a></li>
+                                <li class=""><a href="#"
+                                                class="mr-2 d-flex justify-content-center align-items-center"><span
+                                            class="icon-instagram"></span></a></li>
                             </ul>
                             <p></p>
                         </div>
@@ -232,45 +276,53 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="package-program ">
-                        <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-1.jpg);">
+                        <a href="#" class="img d-flex justify-content-center align-items-center"
+                           style="background-image: url(images/program-1.jpg);">
 
                         </a>
                         <div class="text mt-3">
                             <h3><a href="#">Body Building</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="package-program">
-                        <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(/images/program-2.jpg);">
+                        <a href="#" class="img d-flex justify-content-center align-items-center"
+                           style="background-image: url(/images/program-2.jpg);">
 
                         </a>
                         <div class="text mt-3">
                             <h3><a href="#">Aerobic Classes</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="package-program ">
-                        <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(/images/program-3.jpg);">
+                        <a href="#" class="img d-flex justify-content-center align-items-center"
+                           style="background-image: url(/images/program-3.jpg);">
 
                         </a>
                         <div class="text mt-3">
                             <h3><a href="#">Weight Lifting</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="package-program ">
-                        <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(/images/program-4.jpg);">
+                        <a href="#" class="img d-flex justify-content-center align-items-center"
+                           style="background-image: url(/images/program-4.jpg);">
 
                         </a>
                         <div class="text mt-3">
                             <h3><a href="#">Yoga Classes</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary
+                                regelialia.</p>
                         </div>
                     </div>
                 </div>
@@ -301,7 +353,8 @@
                             <h2 class="heading">One Day Training</h2>
                             <span class="price"><sup>$</sup> <span class="number">7</span></span>
                             <span class="excerpt d-block">100% free. Forever</span>
-                            <a href="{{'/client/order/'.'3'}}" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
+                            <a href="{{'/client/order/'.'3'}}" class="btn btn-primary d-block px-2 py-4 mb-4">Get
+                                Started</a>
 
                             <h3 class="heading-2 mb-4">Enjoy All The Features</h3>
 
@@ -370,7 +423,8 @@
                         <div class="item">
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="text">
-                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind texts.</p>
 
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(/images/person_1.jpg)">
@@ -389,8 +443,8 @@
                         <div class="item">
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="text">
-                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
+                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(/images/person_2.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
@@ -408,7 +462,8 @@
                         <div class="item">
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="text">
-                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind texts.</p>
 
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(/images/person_3.jpg)">
@@ -427,7 +482,8 @@
                         <div class="item">
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="text">
-                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind texts.</p>
 
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(/images/person_1.jpg)">
@@ -446,7 +502,8 @@
                         <div class="item">
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="text">
-                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4 pb-1 pl-4 line">Far far away, behind the word mountains, far from the
+                                        countries Vokalia and Consonantia, there live the blind texts.</p>
 
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(/images/person_2.jpg)">
@@ -482,49 +539,56 @@
                     </div>
                 </div>
                 <div class="col-md-3 ">
-                    <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-2.jpg);">
+                    <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center"
+                       style="background-image: url(/images/gallery-2.jpg);">
                         <div class="icon mb-4 d-flex align-items-center justify-content-center">
                             <span class="icon-instagram"></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 ">
-                    <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-3.jpg);">
+                    <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center"
+                       style="background-image: url(/images/gallery-3.jpg);">
                         <div class="icon mb-4 d-flex align-items-center justify-content-center">
                             <span class="icon-instagram"></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 ">
-                    <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-4.jpg);">
+                    <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center"
+                       style="background-image: url(/images/gallery-4.jpg);">
                         <div class="icon mb-4 d-flex align-items-center justify-content-center">
                             <span class="icon-instagram"></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 ">
-                    <a href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-5.jpg);">
+                    <a href="images/gallery-1.jpg" class="gallery image-popup img d-flex align-items-center"
+                       style="background-image: url(/images/gallery-5.jpg);">
                         <div class="icon mb-4 d-flex align-items-center justify-content-center">
                             <span class="icon-instagram"></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 ">
-                    <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-6.jpg);">
+                    <a href="images/gallery-2.jpg" class="gallery image-popup img d-flex align-items-center"
+                       style="background-image: url(/images/gallery-6.jpg);">
                         <div class="icon mb-4 d-flex align-items-center justify-content-center">
                             <span class="icon-instagram"></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 ">
-                    <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-7.jpg);">
+                    <a href="images/gallery-3.jpg" class="gallery image-popup img d-flex align-items-center"
+                       style="background-image: url(/images/gallery-7.jpg);">
                         <div class="icon mb-4 d-flex align-items-center justify-content-center">
                             <span class="icon-instagram"></span>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 ">
-                    <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(/images/gallery-8.jpg);">
+                    <a href="images/gallery-4.jpg" class="gallery image-popup img d-flex align-items-center"
+                       style="background-image: url(/images/gallery-8.jpg);">
                         <div class="icon mb-4 d-flex align-items-center justify-content-center">
                             <span class="icon-instagram"></span>
                         </div>
@@ -533,4 +597,4 @@
             </div>
         </div>
     </section>
-    @endsection
+@endsection

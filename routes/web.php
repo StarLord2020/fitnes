@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return ;
-})->middleware('auth');
 
 
 Route::name('client.')
@@ -37,5 +34,6 @@ Route::name('admin.')
         Route::view('/','admin.index');
         Route::resource('user', 'UserController');
         Route::post("user-update/{user} ",'UserController@update');
+        Route::resource('order', 'OrderController');
     });
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
