@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Program;
 use App\Models\Tariff;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -10,7 +12,10 @@ class ClientController extends Controller
 {
     public function home() {
 
-        return view('client.home');
+        $coaches = User::where('role','Тренер')->limit(4)->get();
+        $programs = Program::where('id','<>',null)->limit(4)->get();
+
+        return view('client.home',['coaches'=>$coaches,'programs'=>$programs]);
     }
 
     public function  order($plan=null){
@@ -26,9 +31,11 @@ class ClientController extends Controller
         return view('client.order',compact(['tariffs','param','coaches']));
     }
 
-    public function  program(){
+    public function  program()
+    {
+        $programs = Program::where('id','<>',null)->paginate(8);
 
-        return view('client.program');
+        return view('client.program',compact('programs'));
     }
 
     public function  coaches()

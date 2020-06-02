@@ -33,7 +33,6 @@
         </div>
     </section>
 
-
     <section class="ftco-section-services ftco-degree">
         <div class="container">
             <div class="row d-flex align-items-center">
@@ -165,101 +164,29 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 d-flex">
-                    <div class="coach align-items-stretch">
-                        <div class="img" style="background-image: url(/images/trainer-1.jpg);"></div>
-                        <div class="text bg-white p-4 ">
-                            <span class="subheading">Owner / Head Coach</span>
-                            <h3><a href="#">Mark Brook</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
-                            <ul class="ftco-social-media d-flex mt-4">
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-twitter"></span></a></li>
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-facebook"></span></a></li>
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-instagram"></span></a></li>
-                            </ul>
-                            <p></p>
+                @php
+                    $reverse=false;
+                @endphp
+
+                @foreach ($coaches as $coach)
+                    <div class="col-lg-3 d-flex">
+                        <div class="coach align-items-stretch {{$reverse?'d-md-flex flex-column-reverse':''}}">
+                            <div class="img" style="background-image: url(/storage/{{$coach->avatar!=null?$coach->avatar:($coach->sex=='Мужчина'?'avatars/default_male.jpg':'avatars/default_female.jpg')}})"></div>
+                            <div class="text bg-white p-4">
+                                <span class="subheading">Тренер</span>
+                                <h3><a href="#">{{$coach->surname.' '.$coach->name}}</a></h3>
+                                <p>{{$coach->description}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 d-flex">
-                    <div class="coach d-md-flex flex-column-reverse align-items-stretch">
-                        <div class="img" style="background-image: url(/images/trainer-2.jpg);"></div>
-                        <div class="text bg-white p-4 ">
-                            <span class="subheading">Owner / Head Coach</span>
-                            <h3><a href="#">Sarah Henderson</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
-                            <ul class="ftco-social-media d-flex mt-4">
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-twitter"></span></a></li>
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-facebook"></span></a></li>
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-instagram"></span></a></li>
-                            </ul>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex">
-                    <div class="coach align-items-stretch">
-                        <div class="img" style="background-image: url(/images/trainer-3.jpg);"></div>
-                        <div class="text bg-white p-4 ">
-                            <span class="subheading">Owner / Head Coach</span>
-                            <h3><a href="#">George Hump</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
-                            <ul class="ftco-social-media d-flex mt-4">
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-twitter"></span></a></li>
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-facebook"></span></a></li>
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-instagram"></span></a></li>
-                            </ul>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-flex">
-                    <div class="coach d-md-flex flex-column-reverse align-items-stretch">
-                        <div class="img" style="background-image: url(/images/trainer-4.jpg);"></div>
-                        <div class="text bg-white p-4 ">
-                            <span class="subheading">Owner / Head Coach</span>
-                            <h3><a href="#">Victor Hump</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
-                                your mouth.</p>
-                            <ul class="ftco-social-media d-flex mt-4">
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-twitter"></span></a></li>
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-facebook"></span></a></li>
-                                <li class=""><a href="#"
-                                                class="mr-2 d-flex justify-content-center align-items-center"><span
-                                            class="icon-instagram"></span></a></li>
-                            </ul>
-                            <p></p>
-                        </div>
-                    </div>
+                    @php($reverse=!$reverse)
+                @endforeach
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-4 text-center">
+                    <a href="/client/coaches" class="btn-custom py-4">Дивитись більше<span class="ion-ios-arrow-down ml-2"></span></a>
                 </div>
             </div>
         </div>
@@ -274,64 +201,24 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="package-program ">
-                        <a href="#" class="img d-flex justify-content-center align-items-center"
-                           style="background-image: url(images/program-1.jpg);">
-
-                        </a>
-                        <div class="text mt-3">
-                            <h3><a href="#">Body Building</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
+                @foreach ($programs as $program)
+                    <div class="col-md-6 col-lg-3">
+                        <div class="package-program">
+                            <div class="img d-flex justify-content-center align-items-center" style="background-image: url(/storage/{{$program->image!=null?$program->image:'images/default.jpg'}})">
+                            </div>
+                            <div class="text mt-3">
+                                <h3>{{$program->name}}</h3>
+                                <p>{{$program->description}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="package-program">
-                        <a href="#" class="img d-flex justify-content-center align-items-center"
-                           style="background-image: url(/images/program-2.jpg);">
-
-                        </a>
-                        <div class="text mt-3">
-                            <h3><a href="#">Aerobic Classes</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="package-program ">
-                        <a href="#" class="img d-flex justify-content-center align-items-center"
-                           style="background-image: url(/images/program-3.jpg);">
-
-                        </a>
-                        <div class="text mt-3">
-                            <h3><a href="#">Weight Lifting</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="package-program ">
-                        <a href="#" class="img d-flex justify-content-center align-items-center"
-                           style="background-image: url(/images/program-4.jpg);">
-
-                        </a>
-                        <div class="text mt-3">
-                            <h3><a href="#">Yoga Classes</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="container">
             <div class="row mt-4 justify-content-center">
                 <div class="col-md-4 text-center">
-                    <a href="#" class="btn-custom py-4">View More Program <span class="ion-ios-arrow-down ml-2"></span></a>
+                    <a href="/client/program" class="btn-custom py-4">Дивитись більше<span class="ion-ios-arrow-down ml-2"></span></a>
                 </div>
             </div>
         </div>
@@ -507,9 +394,9 @@
 
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(/images/person_2.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
-		                    </span>
+                                            <span class="quote d-flex align-items-center justify-content-center">
+                                              <i class="icon-quote-left"></i>
+                                            </span>
                                         </div>
                                         <div class="ml-4">
                                             <p class="name">Kenny Bufer</p>
