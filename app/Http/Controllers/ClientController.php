@@ -35,7 +35,7 @@ class ClientController extends Controller
     }
 
     public function  contacts(){
-
-        return view('client.contacts');
+        $user = User::where('id',auth()->user()->id)->first();
+        return view('client.contacts',compact('user'));
     }
 }

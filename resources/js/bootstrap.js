@@ -12,6 +12,7 @@ try {
 
     require('bootstrap');
 } catch (e) {}
+window.Noty = require('noty');
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 /**

@@ -28,7 +28,7 @@ Route::name('client.')
         Route::get('/schedule','ClientController@schedule');
         Route::get('/contacts','ClientController@contacts');
     });
-
+Route::post('send','Mail\MailController@send')->name('send');
 Auth::routes();
 Route::name('admin.')
     ->namespace('Admin')
