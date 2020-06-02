@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tariff;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,16 @@ class ClientController extends Controller
         return view('client.home');
     }
 
-    public function  order(){
+    public function  order($plan=null){
+        $param='none';
+        $tariffs=(new Tariff())->getTarriffs();
+        $coaches=(new User())->getAll();
+        if($tariffs->contains('id','=',$plan))
+        {
+            $param=$plan;
+        }
 
-        return view('client.order');
+        return view('client.order',compact(['tariffs','param','coaches']));
     }
 
     public function  program(){
