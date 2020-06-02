@@ -37,5 +37,7 @@ Route::name('admin.')
         Route::view('/','admin.index');
         Route::resource('user', 'UserController');
         Route::post("user-update/{user} ",'UserController@update');
+        Route::resource('programs', 'ProgramController');
+        Route::post("/program-update/{program} ",'ProgramController@update');
     });
 Route::get('/home', 'HomeController@index')->name('home');

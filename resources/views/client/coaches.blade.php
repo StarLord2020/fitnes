@@ -41,7 +41,6 @@
 </style>
 
 @section('content')
-
     <section class="pt-5 pb-4 bg-light">
         <div class="container-fluid">
             <div class="row justify-content-center mb-5">
@@ -51,25 +50,29 @@
                 </div>
             </div>
             <div class="row">
-                @php($reverse=false)
-            @foreach ($coaches as $coach)
-                <div class="col-lg-3 d-flex">
-                    <div class="coach align-items-stretch {{$reverse?'d-md-flex flex-column-reverse':''}}">
-                        <div class="img" style="background-image: url(/storage/{{$coach->avatar}});"></div>
-                        <div class="text bg-white p-4">
-                            <span class="subheading">Тренер</span>
-                            <h3><a href="#">{{$coach->surname.' '.$coach->name}}</a></h3>
-                            <p>{{$coach->description}}</p>
+                @php
+                    $reverse=false;
+                @endphp
+
+                @foreach ($coaches as $coach)
+                    <div class="col-lg-3 d-flex">
+                        <div class="coach align-items-stretch {{$reverse?'d-md-flex flex-column-reverse':''}}">
+                            <div class="img" style="background-image: url(/storage/{{$coach->avatar!=null?$coach->avatar:($coach->sex=='Мужчина'?'avatars/default_male.jpg':'avatars/default_female.jpg')}})"></div>
+                            <div class="text bg-white p-4">
+                                <span class="subheading">Тренер</span>
+                                <h3><a href="#">{{$coach->surname.' '.$coach->name}}</a></h3>
+                                <p>{{$coach->description}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                     @php($reverse=!$reverse)
-            @endforeach
+                @endforeach
+            </div>
+            <div class="paginate d-flex justify-content-center mx-auto">
+                {{$coaches->links()}}
             </div>
         </div>
-        <div class="paginate d-flex justify-content-center mx-auto">
-            {{$coaches->links()}}
-        </div>
+
     </section>
 
     @endsection
