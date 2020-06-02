@@ -1,7 +1,6 @@
 @extends('client.layouts.index')
 @section('content')
     <section class="ftco-appointment">
-        <div class="overlay"></div>
         <div class="container-wrap">
             <div class="row no-gutters d-md-flex align-items-center">
                 <div class="col-md-6 d-flex align-self-stretch img" style="background-image: url(/images/about-3.jpg);">
@@ -40,12 +39,36 @@
                             </div>
                         </div>
                         <div class="d-md-flex">
-                            <div class="form-group">
-                                <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+                            <div class="row">
+                                <div class=" col-6 form-group">
+                                    <textarea name="" id="" cols="30" rows="2" class="message " placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group ml-md-4">
+                                        <select name="tariff" class=" tariff" >
+                                            <option value="none">Виберіть тариф</option>
+                                            @foreach($tariffs as $tariff)
+                                                <option value="{{ $tariff->id}}" {{ $tariff->id==$param ? 'selected="selected"' : '' }}>
+                                                    {{ $tariff->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group ml-md-4">
+                                        <select name="coach" class="coaches" >
+                                            <option value="none" selected>Виберіть тренера</option>
+                                            @foreach($coaches as $coach)
+                                                <option value="{{ $coach->id}}">
+                                                    {{ $coach->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group ml-md-4">
-                                <input type="submit" value="Appointment" class="btn btn-primary py-3 px-4">
-                            </div>
+                        </div>
+                        <div class="d-md-flex">
+                            <input type="submit" value="Appointment" class="btn btn-primary py-3 px-4">
                         </div>
                     </form>
                 </div>
@@ -78,5 +101,40 @@
         background: #1b4b72;
         fill: #1c7430;
         opacity: 0;
+    }
+    .message
+    {
+        border: transparent !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        padding-left: 0;
+        padding-right: 0;
+        background: transparent !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-size: 13px;
+        border-radius: 0px;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        height: 130px;
+        background-color: transparent;
+        color: #ffffff;
+        border: 1px solid #ffff;
+    }
+    .message::placeholder
+    {
+        color: #ffffff;
+    }
+    .tariff,.coaches{
+        color:#fd4514;
+        background-color: #ffffff;
+        width: 190px;
+        border: transparent !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        height: 58px !important;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 13px;
+        border-radius: 0px;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
     }
 </style>

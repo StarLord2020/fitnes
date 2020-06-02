@@ -43,4 +43,5 @@ class User extends Authenticatable
             ->where('role','=','Тренер')
             ->get();
     }
+
 }

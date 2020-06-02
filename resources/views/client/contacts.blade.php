@@ -25,24 +25,24 @@
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-6">
-                    <form action="#" class="contact-form">
+                    <form method="post" onsubmit="sendData();return false;" id="formNews" class="contact-form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name">
+                                    <input type="text" value="{{$user->name}}" name="name" class="form-control" placeholder="Your Name">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Email">
+                                    <input type="text" value="{{$user->email}}" name="email" class="form-control" placeholder="Your Email">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text"  name="subject" class="form-control" placeholder="Subject">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                            <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
@@ -53,3 +53,36 @@
         </div>
     </section>
 @endsection
+
+
+<script>
+    function sendData()
+    {
+        let form = '#formNews';
+        let dataForm = $(form).serialize();
+        $.ajax({
+            url: '{{ route('send')}}',
+            type: 'POST',
+            dataType: 'json',
+            data: dataForm,
+            headers: {
+                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(response){//метод, который выполняется при успешном ответе от сервера
+                if(response.result=="ok")
+                {
+                    new Noty({
+                            type: 'success',
+                            text: 'Ваше сообщение успешно отправленно',
+                            timeout:5000,
+                            theme    : 'mint',
+
+                }).show();
+                }
+            },
+            error: function (response) {
+                alert('Ошибка');
+            }
+        })
+    }
+</script>

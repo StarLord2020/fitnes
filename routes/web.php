@@ -22,13 +22,13 @@ Route::name('client.')
     ->prefix('client')
     ->group(function () {
         Route::get('/','ClientController@home');
-        Route::get('/order','ClientController@order');
+        Route::get('/order/{plan?}','ClientController@order');
         Route::get('/program','ClientController@program');
         Route::get('/coaches','ClientController@coaches');
         Route::get('/schedule','ClientController@schedule');
         Route::get('/contacts','ClientController@contacts');
     });
-
+Route::post('send','Mail\MailController@send')->name('send');
 Auth::routes();
 Route::name('admin.')
     ->namespace('Admin')

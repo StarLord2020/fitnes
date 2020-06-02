@@ -228,7 +228,7 @@
                             <h2 class="heading">One Day Training</h2>
                             <span class="price"><sup>$</sup> <span class="number">7</span></span>
                             <span class="excerpt d-block">100% free. Forever</span>
-                            <a href="#" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
+                            <a href="{{'/client/order/'.'3'}}" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
 
                             <h3 class="heading-2 mb-4">Enjoy All The Features</h3>
 
