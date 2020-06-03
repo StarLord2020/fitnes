@@ -21,6 +21,7 @@ class ClientController extends Controller
 
     public function  order($plan=null){
         $param='none';
+
         $tariffs=(new Tariff())->getTarriffs();
         $coaches=(new User())->getAll();
         if($tariffs->contains('id','=',$plan))

@@ -38,6 +38,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="form-group">
                             <input type="text"  name="subject" class="form-control" placeholder="Subject">
                         </div>
@@ -53,7 +54,6 @@
         </div>
     </section>
 @endsection
-
 
 <script>
     function sendData()
@@ -73,7 +73,7 @@
                 {
                     new Noty({
                             type: 'success',
-                            text: 'Ваше сообщение успешно отправленно',
+                            text: 'Ваше повідомлення успішно надіслано',
                             timeout:5000,
                             theme    : 'mint',
 
@@ -81,7 +81,13 @@
                 }
             },
             error: function (response) {
-                alert('Ошибка');
+                new Noty({
+                    type: 'warning',
+                    text: 'Помилка',
+                    timeout:2000,
+                    theme    : 'mint',
+
+                }).show();
             }
         })
     }

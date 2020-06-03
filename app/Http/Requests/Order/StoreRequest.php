@@ -13,7 +13,7 @@ class StoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,16 @@ class StoreRequest extends FormRequest
      *
      * @return array
      */
+
     public function rules()
     {
         return [
-            //
+
+            'date'=>'required',
+            'message'=>'required|string',
+            'time'=>'required',
+            'tariff_id'=>'required',
+            'coach_id'=>'required'
         ];
     }
 }
