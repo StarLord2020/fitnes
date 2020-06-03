@@ -27,45 +27,33 @@
                             <a class="nav-link {{(Route::currentRouteName() == 'admin.user.index')?'active':''}}" href="{{route('admin.user.index')}}" >Тренери</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link {{(Route::currentRouteName() == '')?'active':''}}" href="#" >Замовлення</a>
+                            <a class="nav-link {{(Route::currentRouteName() == '')?'active':''}}" href="{{route('admin.order.index')}} " >Замовлення</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link {{(Route::currentRouteName() == '')?'active':''}}" href="{{route('admin.programs.index')}}" >Програми</a>
                         </li>
-                        {{--<li class="nav-item mr-5">--}}
-                            {{--<a class="nav-link {{Route::currentRouteName() == ''?'active':''}}" href="{{route('')}}"  aria-haspopup="true" aria-expanded="false">Предметы</a>--}}
-                        {{--</li>--}}
-                        {{--<li class="nav-item mr-5">--}}
-                            {{--<a class="nav-link {{Route::currentRouteName() == ''?'active':''}}" href="{{route('')}}"  aria-haspopup="true" aria-expanded="false">Классы</a>--}}
-                        {{--</li>--}}
-                        {{--<li class="nav-item mr-5">--}}
-                            {{--<a class="nav-link {{Route::currentRouteName() == ''?'active':''}}" href="{{route('')}}"   aria-haspopup="true" aria-expanded="false">Кабинеты</a>--}}
-                        {{--</li>--}}
+                        <li class="nav-item mr-5">
+                            <a class="nav-link {{(Route::currentRouteName() == '')?'active':''}}" href="{{route('admin.tariffs.index')}}" >Тарифи</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="col-4">
                 <div class="user_cabinet d-flex justify-content-end position-relative">
-
-                    <div>
-                        @guest
-                        @else
-                            <div class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
+                    <div class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu position-absolute" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Выйти') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                             </div>
-                        @endguest
+                                {{ __('Выйти') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Order\StoreRequest;
-use App\Models\Order;
-use App\Models\User;
+use App\Http\Requests\Tariff\StoreRequest;
+use App\Http\Requests\Tariff\UpdateRequest;
+use App\Models\Tariff;
 use Illuminate\Http\Request;
 
-class OrderController extends Controller
+class TariffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders=(new Order)->getAll();
+        $tariffs= Tariff::all()->toArray();
 
-        return view('admin.order.index',compact('orders'));
+        return view('admin.tariff.index',compact('tariffs'));
     }
 
     /**
@@ -29,7 +29,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tariff.create');
     }
 
     /**
@@ -40,12 +40,8 @@ class OrderController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $date=$request->only('date','time','coach_id','tariff_id','message');
-        $date['user_id']=auth()->user()->id;
-
-        Order::create($date);
-
-        return response(['result' => 'ok']);
+        Tariff::create($request->all());
+        return response('ok',200);
     }
 
     /**
@@ -65,9 +61,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Tariff $tariff)
     {
-        //
+        return view('admin.tariff.edit',compact('tariff'));
     }
 
     /**
@@ -77,9 +73,13 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, Tariff $tariff)
     {
-        //
+        $data = $request->only(['name','price']);
+
+        $tariff->update($data);
+
+        return ['response'=>'updated'];
     }
 
     /**
@@ -88,13 +88,12 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function destroy(Tariff $tariff)
     {
         $user_role = auth()->user()->role;
-
         if($user_role=='Адмін') {
 
-            $order->delete();
+            $tariff->delete();
 
             return ['response' => 'deleted'];
         }

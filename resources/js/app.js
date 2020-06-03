@@ -67,6 +67,11 @@ Vue.component('table-admin',require('./components/admin/TableAdmin').default);
 Vue.component('create-user',require('./components/admin/user/CreateUser').default);
 Vue.component('edit-user',require('./components/admin/user/EditUser').default);
 Vue.component('index-user',require('./components/admin/user/IndexUser').default);
+Vue.component('index-tariff',require('./components/admin/tariff/IndexTariff').default);
+Vue.component('create-tariff',require('./components/admin/tariff/CreateTariff').default);
+Vue.component('edit-tariff',require('./components/admin/tariff/EditTariff').default);
+Vue.component('index-order',require('./components/admin/order/IndexOrder').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
