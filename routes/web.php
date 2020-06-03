@@ -31,7 +31,7 @@ Auth::routes();
 Route::name('admin.')
     ->namespace('Admin')
     ->prefix('admin')
-    ->middleware(['auth','role:Адмін'])
+    ->middleware(['auth'])
     ->group(function () {
         Route::view('/','admin.index');
         Route::resource('user', 'UserController');
