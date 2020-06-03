@@ -5,6 +5,9 @@
         <th class="" style="font-size: 12px;" colspan="17"><b>Статистика замовлень</b></th>
     </tr>
     <tr>
+        <th class="" style="font-size: 12px;" colspan="17"><b>{{$orders['date']}}</b></th>
+    </tr>
+    <tr>
         <th style="font-size: 12px;" colspan="3" class="b"><b>ФІО клієнта</b></th>
         <th style="font-size: 12px;" colspan="3" class=""><b>Дата початку</b></th>
         <th style="font-size: 12px;" colspan="2" class="b"><b>Початок заняття</b></th>
@@ -14,7 +17,7 @@
     </tr>
     </thead>
     <tbody>
-        @foreach($orders as $order)
+        @foreach($orders['statistic'] as $order)
             @if(isset($order->user)??'')
                 <tr>
                     <td colspan="3">{{$order->user??''}}</td>
@@ -27,8 +30,8 @@
             @endif
         @endforeach
         <tr>
-            @if(isset($profit->tariff)??'')
-                <td colspan="5">Прибуток за місяць: {{$profit->tariff}}</td>
+            @if(isset($profit['sum']->tariff)??'')
+                <td colspan="5">Прибуток за місяць: {{$profit['sum']->tariff}}</td>
 
             @else
                 <td colspan="17">Жодного замовлення</td>
