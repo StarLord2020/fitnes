@@ -29,11 +29,11 @@
                         <div class="d-md-flex">
                             <div class="row">
                                 <div class=" col-6 form-group">
-                                    <textarea name="message" id="" cols="30" rows="2" class="message " placeholder="Message"></textarea>
+                                    <textarea name="message"  id="" cols="30" rows="2" class="message reset" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group ml-md-4">
-                                        <select name="tariff_id" class=" tariff" >
+                                        <select name="tariff_id" class="tariff reset1" >
                                             <option value="none">Виберіть тариф</option>
                                             @foreach($tariffs as $tariff)
                                                 <option value="{{ $tariff->id}}" {{ $tariff->id==$param ? 'selected="selected"' : '' }}>
@@ -43,7 +43,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group ml-md-4">
-                                        <select name="coach_id" class="coaches" >
+                                        <select name="coach_id" class="coaches reset1">
                                             <option value="none" selected>Виберіть тренера</option>
                                             @foreach($coaches as $coach)
                                                 <option value="{{ $coach->id}}">
@@ -145,7 +145,8 @@
             success: function(response){//метод, который выполняется при успешном ответе от сервера
                 if(response.result=="ok")
                 {
-                    $('.reset').empty();
+                    $('.reset').val('');
+                    $('.reset1').val('none');
                     new Noty({
                         type: 'success',
                         text: 'Ваше замовлення успішно надіслано',
