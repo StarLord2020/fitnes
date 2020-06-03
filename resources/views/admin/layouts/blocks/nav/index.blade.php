@@ -36,7 +36,7 @@
                             <a class="nav-link {{(Route::currentRouteName() == '')?'active':''}}" href="{{route('admin.tariffs.index')}}" >Тарифи</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link {{(Route::currentRouteName() == '')?'active':''}}" href="#" >Статистика</a>
+                            <a class="nav-link" href="/admin/statistic/export" >Статистика</a>
                         </li>
                     </ul>
                 </div>

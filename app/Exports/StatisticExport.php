@@ -3,6 +3,8 @@
 namespace App\Exports;
 
 
+use App\Models\Order;
+use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;
 
@@ -12,10 +14,9 @@ class StatisticExport implements FromView
     {
         $todayDate = date("Y-m-d");
         return view('admin.statistic.export', [
-//            'statistics' => (new Chart())->specialtiesForBid($todayDate),
-//            'statisticsResumes' => (new Chart())->specialtiesForResume($todayDate),
-//            'realizationBids' => (new Chart())->getStatisticsForSpecialties(),
-//            'salary' => (new Chart())->getSalaryForSpecialties()
+            'orders' => (new Order)->getStatistic(),
+            'profit' => (new Order)->getSum(),
+            'coaches' => (new User())->getAll()
         ]);
     }
 }
