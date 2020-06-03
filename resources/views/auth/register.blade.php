@@ -88,20 +88,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Пароль') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Пол') }}</label>
+                            <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Стать') }}</label>
                             <div class="col-md-6">
                                 <select
                                     required
@@ -111,11 +98,24 @@
                                     class="form-control @error('sex') is-invalid @enderror"
                                 >
                                     <option selected  value="none">Виберіть стать</option>
-                                    <option>Мужчина</option>
-                                    <option>Женщина</option>
+                                    <option value="Мужчина">Чоловіча</option>
+                                    <option value="Женщина">Жіноча</option>
                                 </select>
                                 @error('sex')
                                 <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Пароль') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
