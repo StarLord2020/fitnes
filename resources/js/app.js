@@ -67,6 +67,9 @@ Vue.component('table-admin',require('./components/admin/TableAdmin').default);
 Vue.component('create-user',require('./components/admin/user/CreateUser').default);
 Vue.component('edit-user',require('./components/admin/user/EditUser').default);
 Vue.component('index-user',require('./components/admin/user/IndexUser').default);
+Vue.component('index-program',require('./components/admin/program/IndexProgram').default);
+Vue.component('create-program',require('./components/admin/program/CreateProgram').default);
+Vue.component('edit-program',require('./components/admin/program/EditProgram').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
