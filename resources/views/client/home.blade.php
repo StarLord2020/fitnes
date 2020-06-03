@@ -1,5 +1,4 @@
 @extends('client.layouts.index')
-
 @section('content')
     <section class="home-slider js-fullheight owl-carousel ftco-degree-bottom">
         <div class="slider-item js-fullheight" style="background-image: url(/images/bg_1.jpg);">
@@ -221,64 +220,24 @@
                     <h2 class="mb-1">Membership Plans</h2>
                 </div>
             </div>
+            {{--{{dd($tariffs)}}--}}
             <div class="row">
-                <div class="col-md-4 ">
-                    <div class="block-7">
-                        <div class="text-center">
-                            <h2 class="heading">One Day Training</h2>
-                            <span class="price"><sup>$</sup> <span class="number">7</span></span>
-                            <span class="excerpt d-block">100% free. Forever</span>
-                            <a href="{{'/client/order/'.'3'}}" class="btn btn-primary d-block px-2 py-4 mb-4">Get Started</a>
-
-                            <h3 class="heading-2 mb-4">Enjoy All The Features</h3>
-
-                            <ul class="pricing-text">
-                                <li>Onetime Access To All Club</li>
-                                <li>Group Trainer</li>
-                                <li>Book A Group Class</li>
-                                <li>Fitness Orientation</li>
-                            </ul>
+                @foreach ($tariffs as $tariff)
+                    <div class="col-md-4 mx-auto">
+                        <div class="block-7">
+                            <div class="text-center">
+                                <h2 class="heading">{{$tariff->name}}</h2>
+                                <span class="price"><sup>$</sup> <span class="number">{{$tariff->price}}</span></span>
+                                <span class="excerpt d-block">Усе включено</span>
+                                <a href="{{'/client/order/'.$tariff->id}}" class="btn btn-primary d-block px-3 py-4 mb-4">Приєднатись</a>
+                                <h3 class="heading-2 mb-4">Насолоджуйтесь всіми особливостями</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 ">
-                    <div class="block-7">
-                        <div class="text-center">
-                            <h2 class="heading">Pay Every Month</h2>
-                            <span class="price"><sup>$</sup> <span class="number">65</span></span>
-                            <span class="excerpt d-block">All features are included</span>
-                            <a href="#" class="btn btn-primary d-block px-3 py-4 mb-4">Get Started</a>
-
-                            <h3 class="heading-2 mb-4">Enjoy All The Features</h3>
-
-                            <ul class="pricing-text">
-                                <li>Group Classes</li>
-                                <li>Discuss Fitness Goals</li>
-                                <li>Group Trainer</li>
-                                <li>Fitness Orientation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="block-7">
-                        <div class="text-center">
-                            <h2 class="heading">1 Year Membership</h2>
-                            <span class="price"><sup>$</sup> <span class="number">125</span></span>
-                            <span class="excerpt d-block">All features are included</span>
-                            <a href="#" class="btn btn-primary d-block px-3 py-4 mb-4">Get Started</a>
-
-                            <h3 class="heading-2 mb-4">Enjoy All The Features</h3>
-
-                            <ul class="pricing-text">
-                                <li>Group Classes</li>
-                                <li>Discuss Fitness Goals</li>
-                                <li>Group Trainer</li>
-                                <li>Fitness Orientation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+            </div>
+            <div class="paginate d-flex justify-content-center mx-auto">
+                {{$tariffs->links()}}
             </div>
         </div>
     </section>

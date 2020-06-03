@@ -14,8 +14,9 @@ class ClientController extends Controller
 
         $coaches = User::where('role','Тренер')->limit(4)->get();
         $programs = Program::where('id','<>',null)->limit(4)->get();
+        $tariffs = Tariff::where('id','<>',null)->paginate(3);
 
-        return view('client.home',['coaches'=>$coaches,'programs'=>$programs]);
+        return view('client.home',['coaches'=>$coaches,'programs'=>$programs,'tariffs'=>$tariffs]);
     }
 
     public function  order($plan=null){

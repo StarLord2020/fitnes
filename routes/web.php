@@ -22,11 +22,11 @@ Route::name('client.')
     ->prefix('client')
     ->group(function () {
         Route::get('/','ClientController@home');
-        Route::get('/order/{plan?}','ClientController@order');
-        Route::get('/program','ClientController@program');
-        Route::get('/coaches','ClientController@coaches');
-        Route::get('/schedule','ClientController@schedule');
-        Route::get('/contacts','ClientController@contacts');
+        Route::get('/order/{plan?}','ClientController@order')->name('order');
+        Route::get('/program','ClientController@program')->name('program');
+        Route::get('/coaches','ClientController@coaches')->name('coaches');
+        Route::get('/schedule','ClientController@schedule')->name('schedule');
+        Route::get('/contacts','ClientController@contacts')->name('contacts');
     });
 Route::post('send','Mail\MailController@send')->name('send');
 Auth::routes();

@@ -6,12 +6,12 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="/client" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/client/program" class="nav-link">Program</a></li>
-                <li class="nav-item"><a href="/client/coaches" class="nav-link">Coaches</a></li>
-                <li class="nav-item"><a href="/client/schedule" class="nav-link">Schedule</a></li>
-                <li class="nav-item"><a href="/client/order" class="nav-link">Заказать</a></li>
-                <li class="nav-item"><a href="/client/contacts" class="nav-link">Contact</a></li>
+                <li class="nav-item {{(Route::currentRouteName() == 'client.')?'active':''}}"><a href="/client" class="nav-link">Головна</a></li>
+                <li class="nav-item {{(Route::currentRouteName() == 'client.program')?'active':''}}"><a href="/client/program" class="nav-link">Програми</a></li>
+                <li class="nav-item {{(Route::currentRouteName() == 'client.coaches')?'active':''}}"><a href="/client/coaches" class="nav-link">Тренери</a></li>
+                <li class="nav-item {{(Route::currentRouteName() == 'client.schedule')?'active':''}}"><a href="/client/schedule" class="nav-link">Розклад</a></li>
+                <li class="nav-item {{(Route::currentRouteName() == 'client.order')?'active':''}}"><a href="/client/order" class="nav-link">Замовити</a></li>
+                <li class="nav-item {{(Route::currentRouteName() == 'client.contacts')?'active':''}}"><a href="/client/contacts" class="nav-link">Контакти</a></li>
             </ul>
         </div>
     </div>

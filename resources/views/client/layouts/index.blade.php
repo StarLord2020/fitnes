@@ -22,6 +22,45 @@
     <link rel="stylesheet" href="{{mix('css/icomoon.css')}}">
     <link rel="stylesheet" href="{{mix('css/style.css')}}">
     <title>Document</title>
+    <style>
+        .paginate {
+            max-width: 400px;
+        }
+        .paginate a{
+            width: 40px;
+            height:40px;
+            border-radius: 50%!important;
+            text-align: center;
+            color:#fd0054!important;
+            margin: 0 2px;
+        }
+        .paginate .active {
+            border-radius: 50%!important;
+        }
+        .page-item.active .page-link {
+            color: #fff;
+            border-radius: 50%!important;
+            width: 40px;
+            height:40px;
+            background-color: #fd0054!important;
+            border:none;
+            text-align: center;
+            margin: 0 2px;
+        }
+        .page-item.disabled .page-link {
+            color: #6c757d;
+            pointer-events: none;
+            cursor: auto;
+            border-radius: 50%!important;
+            background-color: #fff;
+            border-color: #dee2e6;
+            width: 40px;
+            height:40px;
+            color:#fd0054!important;
+            text-align: center;
+            margin: 0 2px;
+        }
+    </style>
 </head>
 <body>
     <div id="app"></div>
