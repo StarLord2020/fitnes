@@ -1,3 +1,4 @@
+
 <table>
     <thead>
     <tr>
@@ -14,7 +15,7 @@
     </thead>
     <tbody>
         @foreach($orders as $order)
-            @if($order->user??'')
+            @if(isset($order->user)??'')
                 <tr>
                     <td colspan="3">{{$order->user??''}}</td>
                     <td  colspan="3">{{ $order->date??''}}</td>
@@ -26,7 +27,12 @@
             @endif
         @endforeach
         <tr>
-            <td colspan="5">Прибуток за місяць: {{$profit->tariff}}</td>
+            @if(isset($profit->tariff)??'')
+                <td colspan="5">Прибуток за місяць: {{$profit->tariff}}</td>
+
+            @else
+                <td colspan="17">Жодного замовлення</td>
+            @endif
         </tr>
     </tbody>
 </table>
@@ -44,7 +50,7 @@
     </thead>
     <tbody>
         @foreach($coaches as $coach)
-            @if($coach->name??'')
+            @if(isset($coach->name)??'')
                 <tr>
                     <td align="right" colspan="3">{{$coach->surname.' '.$coach->name.' '.$coach->patronymic}}</td>
                     <td valign="middle" colspan="3">{{ $coach->email??''}}</td>
