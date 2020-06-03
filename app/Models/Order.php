@@ -28,7 +28,7 @@ class Order extends Model
         $todayDate = date("Y-m-d");
         $start_date = clone(new Carbon($todayDate))->addDays(-30);
 
-       return DB::table('orders')
+       $statistic= DB::table('orders')
             ->join('users','users.id',"=",'orders.user_id')
             ->join('tariffs','tariffs.id','=','orders.tariff_id')
             ->whereBetween('orders.date',array($start_date, $todayDate))
@@ -37,17 +37,20 @@ class Order extends Model
                 'orders.message','tariffs.name as tariff',
                 'users.number','users.email')
             ->get();
+
+        return (['statistic'=>$statistic,'date'=>$start_date->format('Y-m-d').'/'.$todayDate]);
     }
 
     public function getSum()
     {
         $todayDate = date("Y-m-d");
         $start_date = clone(new Carbon($todayDate))->addDays(-30);
-        return DB::table('orders')
+        $sum= DB::table('orders')
             ->join('users','users.id',"=",'orders.user_id')
             ->join('tariffs','tariffs.id','=','orders.tariff_id')
             ->whereBetween('orders.date',array($start_date, $todayDate))
             ->select(DB::raw('SUM(tariffs.price) as tariff'))
             ->first();
+        return (['sum'=>$sum,'date'=>$start_date->format('Y-m-d').'/'.$todayDate]);
     }
 }
