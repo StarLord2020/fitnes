@@ -81,7 +81,7 @@
                                 }
                                 else{
 
-                                    this.$toaster.error('Ошибка');
+                                    this.$toaster.error('Помилка');
                                 }
                             })
                             .catch( e=>{
@@ -90,7 +90,7 @@
                     }
                     else {
 
-                        this.$toaster.warning("Заполните все поля!");
+                        this.$toaster.warning("Заповніть всі поля!!");
                     }
                 })
             }
