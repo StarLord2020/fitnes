@@ -62,7 +62,7 @@
                         v-if="routes.Edit"
                         :href="routes.Edit+row.item.id+'/edit'"
                     >
-                        Редактировать
+                        Редагувати
                     </a>
                     <template v-if="action">
                         <a class="btn btn-info edit" :href="action.route+row.item.id+'/'+row.item.name">{{action.content}}</a>
@@ -71,7 +71,7 @@
                         @click="showMsgBoxDelete(row.item.id,row.index)"
                         size="sm"
                         class="btn btn-danger">
-                        Удалить
+                        Вилучити
                     </b-button>
                 </template>
             </b-table>
@@ -131,15 +131,14 @@
             }
         },
         mounted() {
-            console.log(this.$refs.table.items)
-            // Set the initial number of items
+
 
             this.totalRows = this.items.length
         },
         methods: {
             showMsgBoxDelete(id, index) {
 
-                this.$bvModal.msgBoxConfirm('Вы действительно хотите удалить запись?', {
+                this.$bvModal.msgBoxConfirm('Ви дійсно хочете видалити запис?', {
                     size: 'sm',
                     buttonSize: 'md',
                     okVariant: 'danger',
@@ -155,18 +154,16 @@
                         if (value){
 
                             axios.delete(this.routes.Delete+id).then((response) =>{
-                                console.log(this.routes.Delete+id);
                                 if(response.data.response=='deleted')
                                 {
                                     this.$delete(this.$refs.table.items,index);
                                     this.$refs.table.refresh();
 
-                                    this.$toaster.success("Запись успешно удалена");
+                                    this.$toaster.success("Запис успішно видалена");
 
                                 }
-
                             }).catch(e => {
-                                this.$toaster.error("Пользователь не найден");
+                                this.$toaster.error("Запис не знайдено");
 
                             });
                         }

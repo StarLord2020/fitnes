@@ -299,12 +299,12 @@
                         .then((response) => {
                                 if (response.data.response == 'updated') {
 
-                                    this.$toaster.success('Данные успешно отредактированы');
+                                    this.$toaster.success('Дані успішно відредаговані');
                                     document.location.href = "/admin/user"
                                 }
                                 else {
 
-                                    this.$toaster.error('Ошибка');
+                                    this.$toaster.error('Помилка');
                                 }
                             })
                             .catch(e => {
@@ -314,7 +314,7 @@
                         }
                     else {
 
-                        this.$toaster.warning("Заполните все поля!");
+                        this.$toaster.warning("Заповніть всі поля!");
                     }
                 })
 

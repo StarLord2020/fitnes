@@ -70,6 +70,11 @@ Vue.component('index-user',require('./components/admin/user/IndexUser').default)
 Vue.component('index-program',require('./components/admin/program/IndexProgram').default);
 Vue.component('create-program',require('./components/admin/program/CreateProgram').default);
 Vue.component('edit-program',require('./components/admin/program/EditProgram').default);
+Vue.component('index-tariff',require('./components/admin/tariff/IndexTariff').default);
+Vue.component('create-tariff',require('./components/admin/tariff/CreateTariff').default);
+Vue.component('edit-tariff',require('./components/admin/tariff/EditTariff').default);
+Vue.component('index-order',require('./components/admin/order/IndexOrder').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
