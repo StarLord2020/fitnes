@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::name('client.')
     ->prefix('client')
+    ->middleware('auth')
     ->group(function () {
         Route::get('/','ClientController@home');
         Route::get('/order/{plan?}','ClientController@order')->name('order');
@@ -25,11 +26,12 @@ Route::name('client.')
         Route::get('/schedule','ClientController@schedule')->name('schedule');
         Route::get('/contacts','ClientController@contacts')->name('contacts');
     });
-Route::post('send','Mail\MailController@send')->name('send');
+Route::post('send','Mail\MailController@send')->name('send')->middleware('auth');
 Auth::routes();
 Route::name('admin.')
     ->namespace('Admin')
     ->prefix('admin')
+    ->middleware(['auth','role:Адмін'])
     ->group(function () {
         Route::view('/','admin.index');
         Route::resource('user', 'UserController');
@@ -39,4 +41,4 @@ Route::name('admin.')
         Route::resource('tariffs', 'TariffController');
         Route::post("/program-update/{program} ",'ProgramController@update');
     });
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home')->middleware('auth');

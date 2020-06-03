@@ -46,6 +46,17 @@ class UserTableSeeder extends Seeder
                 'sex'=>'Мужчина',
                 'role'=>'Тренер'
             ],
+            ['surname'=>'Полох',
+                'name' => 'Максим',
+                'patronymic' => 'Олександрович',
+                'email'=>'user@gmail.com',
+                'password'=>\Illuminate\Support\Facades\Hash::make('user1'),
+                'number'=>'3805872352',
+                'address'=>'Одеса',
+                'description'=>null,
+                'sex'=>'Мужчина',
+                'role'=>'Клієнт'
+            ],
 
 
         ];
