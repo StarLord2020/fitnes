@@ -31,8 +31,7 @@
         @endforeach
         <tr>
             @if(isset($profit['sum']->tariff)??'')
-                <td colspan="5">Прибуток за місяць: {{$profit['sum']->tariff}}</td>
-
+                <td colspan="5">Прибуток за місяць: {{$profit['sum']->tariff}} грн</td>
             @else
                 <td colspan="17">Жодного замовлення</td>
             @endif
