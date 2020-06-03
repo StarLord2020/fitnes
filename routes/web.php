@@ -40,5 +40,6 @@ Route::name('admin.')
         Route::resource('programs', 'ProgramController');
         Route::resource('tariffs', 'TariffController');
         Route::post("/program-update/{program} ",'ProgramController@update');
+        Route::get('/statistic/export', 'StatisticController@export');
     });
 Route::get('/', 'HomeController@index')->name('home')->middleware('auth');
